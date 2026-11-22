@@ -1,0 +1,51 @@
+{
+  "name": "@cell-hygiene/core",
+  "version": "0.1.0",
+  "description": "Cell classification, quarantine policies, and transaction planning for Nervos CKB",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run src"
+  },
+  "peerDependencies": {
+    "@ckb-ccc/core": "^1.23.1",
+    "@ckb-ccc/eip6963": "^1.1.16",
+    "@ckb-ccc/joy-id": "^1.2.7",
+    "@ckb-ccc/utxo-global": "^1.2.7"
+  },
+  "peerDependenciesMeta": {
+    "@ckb-ccc/core": {
+      "optional": true
+    },
+    "@ckb-ccc/eip6963": {
+      "optional": true
+    },
+    "@ckb-ccc/joy-id": {
+      "optional": true
+    },
+    "@ckb-ccc/utxo-global": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@ckb-ccc/core": "^1.23.1",
+    "@ckb-ccc/joy-id": "^1.2.7",
+    "@ckb-ccc/utxo-global": "^1.2.7",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

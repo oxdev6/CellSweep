@@ -1,0 +1,31 @@
+{
+  "name": "cellsweep",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CellSweep — non-custodial cell hygiene and coin control for Nervos CKB",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run build:packages && npm run dev -w web",
+    "build": "npm run build:packages && npm run build -w web",
+    "start": "npm run start -w web",
+    "lint": "eslint .",
+    "typecheck": "npm run typecheck -w web && npm run typecheck -w @cell-hygiene/core && npm run typecheck -w @cell-hygiene/guard",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build:packages": "npm run build -w @cell-hygiene/core && npm run build -w @cell-hygiene/guard"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "next": "16.4.6",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
