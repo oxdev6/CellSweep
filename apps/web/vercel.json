@@ -1,4 +1,4 @@
-﻿{
+{
   "installCommand": "cd ../.. && npm install",
   "buildCommand": "cd ../.. && npm run build:packages && npm run build -w web"
 }
