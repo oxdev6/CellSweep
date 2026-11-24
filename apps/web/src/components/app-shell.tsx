@@ -68,7 +68,6 @@ export function AppShell({ children }: { children: ReactNode }) {
           <footer className="border-t border-border px-6 py-4 text-[11px] text-muted">
             <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-2">
               <span>CellSweep · Non-custodial cell hygiene for Nervos CKB</span>
-              <span className="font-mono">Built on CKBer&apos;s Codebase · v1.0.0</span>
             </div>
           </footer>
         </div>
